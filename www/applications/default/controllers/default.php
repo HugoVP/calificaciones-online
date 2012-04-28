@@ -19,7 +19,7 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function index() {	
-<<<<<<< HEAD
+
 		/*$vars["message"] = __(_("Hello World"));
 		$vars["view"]	 = $this->view("show", TRUE);
 		
@@ -27,7 +27,7 @@ class Default_Controller extends ZP_Controller {
 
 		for ($i = 10; $i >= 0; $i--) {
 			print $i . "<br />";
-=======
+
 		//$vars["message"] = __(_("Hello World"));
 		//$vars["view"]	 = $this->view("show", TRUE);
 		
@@ -36,7 +36,6 @@ class Default_Controller extends ZP_Controller {
 		for($i=1; $i<=10 ; $i++)
 		{
 			print $i;
->>>>>>> 9f7a356951abd049d8f81d046e5e5f487b9161bd
 		}
 	}
 
