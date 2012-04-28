@@ -33,11 +33,12 @@ class Default_Controller extends ZP_Controller {
 		
 		//$this->render("content", $vars);
 
-		for($i=1; $i<=10 ; $i++)
+		
+	}
+	for($i=1; $i<=10 ; $i++)
 		{
 			print $i;
 		}
-	}
 
 	public function contact($contactID) {
 		$data = $this->Default_Model->contact($contactID);
