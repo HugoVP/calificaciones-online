@@ -27,8 +27,13 @@ class Default_Controller extends ZP_Controller {
 
 		for ($i = 10; $i >= 0; $i--) {
 			print $i . "<br />";
+<<<<<<< HEAD
 		}
 
+=======
+
+		//$vars["message"] = __(_("Hello World"));
+>>>>>>> 7a06cdd4c9971ad97b881177d5c2641e9ab8cb24
 		//$vars["view"]	 = $this->view("show", TRUE);
 		
 		//$this->render("content", $vars);
