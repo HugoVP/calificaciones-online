@@ -19,10 +19,15 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function index() {	
-		$vars["message"] = __(_("Hello World"));
-		$vars["view"]	 = $this->view("show", TRUE);
+		//$vars["message"] = __(_("Hello World"));
+		//$vars["view"]	 = $this->view("show", TRUE);
 		
-		$this->render("content", $vars);
+		//$this->render("content", $vars);
+
+		for($i=1; $i<=10 ; $i++)
+		{
+			print $i;
+		}
 	}
 
 	public function contact($contactID) {
