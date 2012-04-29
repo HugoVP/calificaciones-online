@@ -15,7 +15,7 @@ class Default_Controller extends ZP_Controller {
 
 		$this->Templates->theme();
 
-		$this->Default_Model = $this->model("Default_Model");
+		//$this->Default_Model = $this->model("Default_Model");
 	}
 	
 	public function index() {	
@@ -25,18 +25,18 @@ class Default_Controller extends ZP_Controller {
 		
 		$this->render("content", $vars);*/
 
-		for ($i = 10; $i >= 0; $i--) {
-			print $i . "<br />";
-		}
+		//for ($i = 10; $i >= 0; $i--) {
+		//	print $i . "<br />";
+		//}
 
-		//$vars["message"] = __(_("Hello World"));
-		//$vars["view"]	 = $this->view("show", TRUE);
-		//$this->render("content", $vars);
+		$vars["message"] = __(_("Hello World"));
+		$vars["view"]	 = $this->view("show", TRUE);
+		$this->render("content", $vars);
 
-		for($i=1; $i<=10 ; $i++)
+		/*for($i=1; $i<=10 ; $i++)
 		{
 			print $i;
-		}		
+		}*/		
 	}
 	
 
