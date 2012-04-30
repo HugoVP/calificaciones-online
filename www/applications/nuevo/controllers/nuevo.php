@@ -6,35 +6,25 @@ if(!defined("_access")) {
 	die("Error: You don't have permission to access here...");
 }
 
-class Default_Controller extends ZP_Controller {
+class Nuevo_Controller extends ZP_Controller {
 	
 	public function __construct() {
-		$this->app("default");
+		$this->app("Nuevo");
 		
 		$this->Templates = $this->core("Templates");
 
 		$this->Templates->theme();
 
-		$this->Model = $this->model("Default_Model");
+		$this->Nuevo_Model = $this->model("Nuevo_Model");
 	}
 	
 	public function index() {
-		$vars["message"] = __(_("Hello World"));
-		$vars["view"]	 = $this->view("show", TRUE);
-		$this->render("content", $vars);
+		print "Hola soy el Nuevo Controller";	
+	}
 
-		/*$data	= array(
-			'carcve'	=> 1,								# Clave de la Carrera
-			'carnco'	=> 'LIC.INFORMATICA',				# Nombre abreviado de la Carrera
-			'carnom'	=> 'LICENCIATURA EN INFORMATICA',	# Nombre de la Carrera
-			'carsit'	=> 1								# Situación de la Carrera
-		);
+	public function imprimir($text){
+		print($text);
 
-		$ok	= $this->Model->insert($data);
-
-		if ($ok)
-			return ____($data);
-		return print "Fail";*/
 	}
 	
 

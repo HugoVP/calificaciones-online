@@ -6,16 +6,16 @@ if(!defined("_access")) {
 	die("Error: You don't have permission to access here...");
 }
 
-class Default_Controller extends ZP_Controller {
+class Calificaciones_Controller extends ZP_Controller {
 	
 	public function __construct() {
-		$this->app("default");
+		$this->app("calificaciones");
 		
 		$this->Templates = $this->core("Templates");
 
 		$this->Templates->theme();
 
-		$this->Model = $this->model("Default_Model");
+		$this->Model = $this->model("Calificaciones_Model");
 	}
 	
 	public function index() {
@@ -37,6 +37,10 @@ class Default_Controller extends ZP_Controller {
 		return print "Fail";*/
 	}
 	
+	public function graphs() {
+		//$vars[];
+		$this->render('content', null);
+	}
 
 	public function contact($contactID) {
 		$data = $this->Default_Model->contact($contactID);
