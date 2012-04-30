@@ -19,11 +19,11 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function index() {
-		//$vars["message"] = __(_("Hello World"));
-		//$vars["view"]	 = $this->view("show", TRUE);
-		//$this->render("content", $vars);
+		$vars["message"] = __(_("Hello World"));
+		$vars["view"]	 = $this->view("show", TRUE);
+		$this->render("content", $vars);
 
-		$data	= array(
+		/*$data	= array(
 			'carcve'	=> 1,								# Clave de la Carrera
 			'carnco'	=> 'LIC.INFORMATICA',				# Nombre abreviado de la Carrera
 			'carnom'	=> 'LICENCIATURA EN INFORMATICA',	# Nombre de la Carrera
@@ -34,7 +34,7 @@ class Default_Controller extends ZP_Controller {
 
 		if ($ok)
 			return ____($data);
-		return print "Fail";
+		return print "Fail";*/
 	}
 	
 
