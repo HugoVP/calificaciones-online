@@ -13,17 +13,10 @@ class Calificaciones_Model extends ZP_Model {
 		
 		$this->helpers();
 	
-		$this->table = "contacts";
+		$this->table = "alumnos";
 	}
 
-	public function contact($id) {
-		$data = $this->Db->findAll($this->table);
-
-		return $data;
-	}
-
-	public function insert ($data) {
-		return $this->Db->insert('carreras', $data);
-	}
-	
+	public function getStudents() {
+		return $this->Db->findAll($this->table);
+	}	
 }
