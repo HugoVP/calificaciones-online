@@ -6,7 +6,7 @@ if(!defined("_access")) {
 	die("Error: You don't have permission to access here...");
 }
 
-class Default_Controller extends ZP_Controller {
+class Nuevo_Controller extends ZP_Controller {
 	
 	public function __construct() {
 		$this->app("default");
@@ -19,29 +19,12 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function index() {
-	/*$vars["message"] = __(_("Hello World"));
-	$this->view("show",$vars);	
-	$vars["message"] = __(_("Home"));
-	$this->view("show",$vars);
-*/
-	
+	print "Hola soy el Nuevo Controller";	
+	}
 
+	public function imprimir($text){
+		print($text);
 
-		//for ($i = 10; $i >= 0; $i--) {
-		//	print $i . "<br />";
-		//}
-
-		$vars["message"] = __(_("Hello World"));
-		
-		$vars["view"]	 = $this->view("show", TRUE);
-		
-		$this->render("content", $vars);
-		
-
-		//for($i=1; $i<=10 ; $i++)
-		//{
-		//	print $i;
-		//}		
 	}
 	
 
