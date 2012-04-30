@@ -16,13 +16,13 @@ $Load->helper($helpers);
 
 include "configuration.php";
 
-if(isset($ZP["benchMark"])) {
+if($ZP["benchMark"]) {
 	benchMarkStart();
 }
 
 execute();
 
-if(isset($ZP["benchMark"])) 
+if($ZP["benchMark"]) 
 {
 	benchMarkEnd();
 }

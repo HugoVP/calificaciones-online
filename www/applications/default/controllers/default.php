@@ -15,7 +15,7 @@ class Default_Controller extends ZP_Controller {
 
 		$this->Templates->theme();
 
-		//$this->Default_Model = $this->model("Default_Model");
+		$this->Model = $this->model("Default_Model");
 	}
 	
 	public function index() {	
@@ -29,9 +29,23 @@ class Default_Controller extends ZP_Controller {
 		//	print $i . "<br />";
 		//}
 
-		$vars["message"] = __(_("Hello World"));
-		$vars["view"]	 = $this->view("show", TRUE);
-		$this->render("content", $vars);
+		//$vars["message"] = __(_("Hello World"));
+		//$vars["view"]	 = $this->view("show", TRUE);
+		//$this->render("content", $vars);
+
+		$data	= array(
+			'carcve'	=> 1,								# Clave de la Carrera
+			'carnco'	=> 'LIC.INFORMATICA',				# Nombre abreviado de la Carrera
+			'carnom'	=> 'LICENCIATURA EN INFORMATICA',	# Nombre de la Carrera
+			'carsit'	=> 1								# Situación de la Carrera
+		);
+
+		$ok	= $this->Model->insert($data);
+
+		if ($ok)
+			return ____($data);
+		return print "Fail";
+
 
 		/*for($i=1; $i<=10 ; $i++)
 		{

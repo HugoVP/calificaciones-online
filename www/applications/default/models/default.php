@@ -21,5 +21,9 @@ class Default_Model extends ZP_Model {
 
 		return $data;
 	}
+
+	public function insert ($data) {
+		return $this->Db->insert('carreras', $data);
+	}
 	
 }
