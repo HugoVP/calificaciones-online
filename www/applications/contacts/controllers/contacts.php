@@ -9,50 +9,28 @@ if(!defined("_access")) {
 class Contacts_Controller extends ZP_Controller {
 	
 	public function __construct() {
-		$this->app("Nuevo");
+		$this->app("contacts");
 		
 		$this->Templates = $this->core("Templates");
 
 		$this->Templates->theme();
 
-		//$this->Default_Model = $this->model("Default_Model");
+		$this->Contacts_Model = $this->model("Contacts_Model");
 	}
 	
 	public function index() {
 
-		$vars["message"] = __(_("Hello World"));
+		$vars["message"] = __(_("Entraste en contactos"));
 		
-		$vars["view"]	 = $this->view("show", TRUE);
+		$vars["view"]	 = $this->view("contacts", TRUE);
 		
 		$this->render("content", $vars);	
-	}
-
-	public function imprimir($text){
-		print($text);
-
 	}
 	
 
 	public function contact($contactID) {
-		$data = $this->Default_Model->contact($contactID);
+		$data = $this->Contacts_Model->contact($contactID);
 		____($data);
-	}
-
-	public function page($page) {
-		$data = $this->Default_Model->page($page);
-		____($data);
-	}
-
-	public function test($param1, $param2) {
-		print "New dispatcher it's works fine: $param1, $param2";
-	}
-
-	public function show($message) {
-		$vars["message"] = $message;
-		$vars["view"]	 = $this->view("show", TRUE);
-		
-		$this->render("content", $vars);
-		#$this->view("show", $vars);
 	}
 
 }

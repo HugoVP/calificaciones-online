@@ -6,7 +6,7 @@ if(!defined("_access")) {
 	die("Error: You don't have permission to access here...");
 }
 
-class Default_Model extends ZP_Model {
+class Contacts_Model extends ZP_Model {
 	
 	public function __construct() {
 		$this->Db = $this->db();
@@ -16,8 +16,8 @@ class Default_Model extends ZP_Model {
 		$this->table = "contacts";
 	}
 
-	public function contact($id) {
-		$data = $this->Db->findAll($this->table);
+	public function contact($contactID) {
+		$data = $this->Db->find($contactID,$this->table);
 
 		return $data;
 	}
