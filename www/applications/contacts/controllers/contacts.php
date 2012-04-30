@@ -6,10 +6,10 @@ if(!defined("_access")) {
 	die("Error: You don't have permission to access here...");
 }
 
-class Nuevo_Controller extends ZP_Controller {
+class Contacts_Controller extends ZP_Controller {
 	
 	public function __construct() {
-		$this->app("default");
+		$this->app("Nuevo");
 		
 		$this->Templates = $this->core("Templates");
 
@@ -19,7 +19,12 @@ class Nuevo_Controller extends ZP_Controller {
 	}
 	
 	public function index() {
-	print "Hola soy el Nuevo Controller";	
+
+		$vars["message"] = __(_("Hello World"));
+		
+		$vars["view"]	 = $this->view("show", TRUE);
+		
+		$this->render("content", $vars);	
 	}
 
 	public function imprimir($text){
