@@ -1,6 +1,11 @@
 ﻿Hola
 Hola de nuevo 
+<<<<<<< HEAD
 Hola!v Alfonso  ---->>> Nuevo comentario antes de hacer pull
+=======
+Hola!v Alfonso
+Saludos Alfonso esta es mi respuesta
+>>>>>>> 55e5f5d5828a00c1ae3d72acb01ea2ae626132b1
 
 Sorpeprperp
 
