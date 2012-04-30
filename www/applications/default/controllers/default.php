@@ -57,7 +57,7 @@ class Default_Controller extends ZP_Controller {
 		$vars["view"]	 = $this->view("show", TRUE);
 		
 		$this->render("content", $vars);
-		#$this->view("show", $vars);
+		$this->view("show", $vars);
 	}
 
 }
