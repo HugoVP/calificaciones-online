@@ -7,3 +7,4 @@ if(!defined("_access")) {
 }
 
 $phrase["hello_world"] = "Hello World";
+$phrase["home"] = "Home";
