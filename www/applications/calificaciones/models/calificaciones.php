@@ -18,5 +18,14 @@ class Calificaciones_Model extends ZP_Model {
 
 	public function getStudents() {
 		return $this->Db->findAll($this->table);
-	}	
+	}
+
+	//public function validateUser($data) {
+	public function validateUser($user, $pass) {
+		$data	= $this->Db->find($user, $this->table);
+
+		if ($data[0]['alucon'] === $pass)
+			return $data[0];
+		return false;
+	}
 }

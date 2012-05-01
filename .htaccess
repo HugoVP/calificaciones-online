@@ -1,5 +1,5 @@
 RewriteEngine on
-RewriteBase /db/calificaciones-online
+RewriteBase /db/calificaciones2
 RewriteCond %{REQUEST_FILENAME} !-f 
 RewriteCond %{REQUEST_FILENAME} !-d 
 RewriteRule ^(.*) index.php
