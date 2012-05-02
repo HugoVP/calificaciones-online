@@ -20,14 +20,30 @@ class Calificaciones_Controller extends ZP_Controller {
 		$this->Model = $this->model("Calificaciones_Model");
 	}
 	
-	public function index() {		
+	public function index() {
 		$vars["view"]['login']	= $this->view("login", TRUE);
-		$this->render("login", $vars);
+
+		if (!SESSION('user'))
+			return $this->render("login", $vars);
+		
+		$this->render("content", $vars);
 	}
 
 	public function home() {
 		$vars["view"]['login']	= $this->view("login", TRUE);
-		$this->render("login", $vars);
+
+		if (!SESSION('user'))
+			return $this->render("login", $vars);
+
+		$nsemesters	= $this->Model->getSemesters(SESSION('user'));
+		$grades		= $this->Model->getInfoGrades(SESSION('user'));
+		//____($data);
+
+		$vars['nsemesters']	= $nsemesters;
+		$vars['grades']		= $grades;
+		$vars['view']['infogrades']	= $this->view('infogrades', TRUE);
+		$vars['view']['semesters']	= $this->view('semesters', TRUE);
+		$this->render("content", $vars);
 	}
 	
 	public function graphs() {

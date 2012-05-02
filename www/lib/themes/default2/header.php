@@ -48,25 +48,12 @@
 						</ul>
 						<form class="navbar-search pull-left" action="calificaciones/login" method="post">
 							<input type="text" class="search-query span2" placeholder="Search">
-							<!--<input class="input-small" name="username" type="text" placeholder="Username">
-							<input class="input-small" name="password" type="password" placeholder="Password">-->
-							<!--<button class="btn" type="submit">Sign in</button>-->
 						</form>
 						</form>
 						<ul class="nav pull-right">
+							<!-- VIEW LOGIN -->
 							<?php $this->load(isset($view['login']) ? $view['login'] : NULL, TRUE); ?>
-							<!--<li><a href="<?php print get("webURL") . _sh . 'calificaciones/login/'; ?>">Iniciar sessión</a></li>-->
-							<!-- <li class="divider-vertical"></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
-									<li class="divider"></li>
-									<li><a href="#">Separated link</a></li>
-								</ul>
-							</li> -->
+							<!-- VIEW LOGIN -->
 						</ul>
 					</div><!-- /.nav-collapse -->
 				</div>
@@ -77,6 +64,7 @@
 	      	<!-- Main hero unit for a primary marketing message or call to action -->
 	      	<div class="hero-unit">
 	        	<h1>Calificaciones online</h1>
-	        	<!--<p class="pull-right">Un sitio donde podrás consultar tus calificaciones de manera rápida y sencilla</p>
-	        	<!--<p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>-->
 	      	</div>
+
+	      	<!-- Example row of columns -->
+	      	<div class="row">

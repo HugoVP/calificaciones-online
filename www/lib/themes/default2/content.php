@@ -4,21 +4,23 @@
 	}
 ?>
 
-<!-- Example row of columns -->
-      <div class="row">
-        <div class="span4">
-          <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-      	</div>
-        <div class="span4">
-          <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-      </div>
+<div class="span9">
+	<h2>Datos de las calificaciones</h2>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th class="span6">Materia</th>
+				<th class="span1">Calificación</th>
+				<th class="span1">Situación</th>
+				<th class="span1">Créditos</th>
+			</tr>
+		</thead>
+		<tbody>
+		<!-- VIEW INFOGRADES -->
+		<?php $this->load(isset($view['infogrades']) ? $view['infogrades'] : NULL, TRUE); ?>
+		<!-- VIEW INFOGRADES -->
+		</tbody>
+	</table>
+</div>
+
+<?php $this->load('aside'); ?>

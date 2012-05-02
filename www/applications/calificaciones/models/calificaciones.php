@@ -28,4 +28,19 @@ class Calificaciones_Model extends ZP_Model {
 			return $data[0];
 		return false;
 	}
+
+	public function getInfo($user) {
+		return $this->Db->query("SELECT DISTINCT matsem FROM zan_calificaciones NATURAL JOIN zan_materias WHERE aluctr = '$user' ORDER BY matsem ASC");
+	}
+
+	public function getSemesters($user) {
+		return $this->Db->query("SELECT DISTINCT matsem FROM zan_calificaciones NATURAL JOIN zan_materias WHERE aluctr = '$user' ORDER BY matsem ASC");
+	}
+
+	public function getInfoGrades($user) {
+		return $this->Db->query("SELECT * FROM zan_calificaciones NATURAL JOIN zan_materias WHERE aluctr = '$user' ");
+		/*$this->Db->from('calificaciones');
+		$this->Db->join('zan_materias', "zan_calificaciones.aluctr = '$user'", 'LEFT');		
+		$data	= $this->Db->get();*/
+	}
 }

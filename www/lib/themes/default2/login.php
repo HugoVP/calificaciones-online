@@ -4,7 +4,7 @@
   }
 ?>
 
-<div class="row-fluid">
+<div class="row">
   <div class="well span4"></div>  
   <form class="form-horizontal span8" action="<?php print get("webURL") . _sh . 'calificaciones/api/login'; ?>" method="post">
     <fieldset>

@@ -37,8 +37,8 @@ class Api_Controller extends ZP_Controller {
 		$data = $this->Model->validateUser(POST('username'), POST('password'));
 		//____($data);
 
-		if (!$data)
-			return print ('Error');
+		if (!$data)	// El usuario no ha podido ser autentificado
+			return print ('El usuario no ha podido ser autentificado');
 
 		SESSION('user', $data['aluctr']);	// Creado variable de SESSION para USER
 		SESSION('pass', $data['alucon']);	// Creado variable de SESSION para PASS
@@ -51,17 +51,6 @@ class Api_Controller extends ZP_Controller {
 		SESSION('carrear', $data['carcve']);
 
 		redirect(get('webURL') . _sh . 'calificaciones/home');
-
-		/*if ()	// El usuario no ha podido ser autentificado
-			return print('Error');
-
-		SESSION('user', $data['aluctr']);	// Creado variable de SESSION para USER
-		SESSION('pass', $data['alucon']);	// Creado variable de SESSION para PASS		
-
-		redirect(get('webURL') . _sh . 'calificaciones/home');
-
-		/*$vars['view']	= $this->view('login', true);
-		$this->render('content', $vars);*/
 	}
 
 	public function logout() {
@@ -71,6 +60,16 @@ class Api_Controller extends ZP_Controller {
 	public function contact($contactID) {
 		$data = $this->Default_Model->contact($contactID);
 		____($data);
+	}
+
+	public function pdf() {
+		//$html = $_REQUEST['html'];
+		//$alumno = $_REQUEST['alumno'];
+		$html = 'html';
+		$alumno = 'alumno';		
+		require_once(_corePath ."/libraries/generapdf/pdf.php");
+		print _corePath ."/libraries/generapdf/tcpdf.php";
+		//$this->library
 	}
 
 	public function page($page) {
