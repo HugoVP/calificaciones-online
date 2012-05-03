@@ -9,7 +9,9 @@ if(!defined("_access")) {
 
 class Admin_Model extends ZP_Model {
 	
-	public function __construct() {
+	public function __construct() 
+	{
+
 		$this->Db = $this->db();
 		
 		$this->helpers();
@@ -17,9 +19,9 @@ class Admin_Model extends ZP_Model {
 		$this->table = "zan_usuarios";
 	}
 
-	public function contact($contactID) {
+	public function contact($contactID) 
+	{
 		$data = $this->Db->find($contactID,$this->table);
-
 		return $data;
 	}
 	
