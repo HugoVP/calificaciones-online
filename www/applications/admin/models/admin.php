@@ -1,6 +1,7 @@
 <?php
 /**
  * Access from index.php:
+  *Gersain Aguilar pardo
  */
 if(!defined("_access")) {
 	die("Error: You don't have permission to access here...");
