@@ -2,6 +2,7 @@
 *.swp
 *~
 *.sql
+.htaccesss
 
 www/config/config.php
 www/config/database.php

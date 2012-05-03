@@ -13,33 +13,54 @@ class Calificaciones_Controller extends ZP_Controller {
 		
 		$this->Templates = $this->core("Templates");
 
-		$this->Templates->theme();
+		$this->Templates->theme('default2');
+
+		$this->helpers('sessions');
 
 		$this->Model = $this->model("Calificaciones_Model");
 	}
 	
 	public function index() {
-		$vars["message"] = __(_("Hello World"));
-		$vars["view"]	 = $this->view("show", TRUE);
+		$vars["view"]['login']	= $this->view("login", TRUE);
+
+		if (!SESSION('user'))
+			return $this->render("login", $vars);
+		
 		$this->render("content", $vars);
+	}
 
-		/*$data	= array(
-			'carcve'	=> 1,								# Clave de la Carrera
-			'carnco'	=> 'LIC.INFORMATICA',				# Nombre abreviado de la Carrera
-			'carnom'	=> 'LICENCIATURA EN INFORMATICA',	# Nombre de la Carrera
-			'carsit'	=> 1								# Situación de la Carrera
-		);
+	public function home() {
+		$vars["view"]['login']	= $this->view("login", TRUE);
 
-		$ok	= $this->Model->insert($data);
+		if (!SESSION('user'))
+			return $this->render("login", $vars);
 
-		if ($ok)
-			return ____($data);
-		return print "Fail";*/
+		$nsemesters	= $this->Model->getSemesters(SESSION('user'));
+		$grades		= $this->Model->getInfoGrades(SESSION('user'));
+		//____($data);
+
+		$vars['nsemesters']	= $nsemesters;
+		$vars['grades']		= $grades;
+		$vars['view']['infogrades']	= $this->view('infogrades', TRUE);
+		$vars['view']['semesters']	= $this->view('semesters', TRUE);
+		$this->render("content", $vars);
 	}
 	
 	public function graphs() {
-		//$vars[];
-		$this->render('content', null);
+		$data	= $this->Model->getStudents();
+		____($data);
+
+		$vars["message"] = $data;
+		$vars['view']	=	$this->view('show', true);
+		$this->render('content', $vars);		
+	}
+
+	public function login() {
+		if (SESSION('user'))
+			return redirect(get('webURL') . _sh . 'calificaciones/home');
+
+		$vars['view']['login']	= $this->view('login', true);
+		$this->render('login', $vars);
 	}
 
 	public function contact($contactID) {

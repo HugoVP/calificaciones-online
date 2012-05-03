@@ -13,17 +13,34 @@ class Calificaciones_Model extends ZP_Model {
 		
 		$this->helpers();
 	
-		$this->table = "contacts";
+		$this->table = "alumnos";
 	}
 
-	public function contact($id) {
-		$data = $this->Db->findAll($this->table);
-
-		return $data;
+	public function getStudents() {
+		return $this->Db->findAll($this->table);
 	}
 
-	public function insert ($data) {
-		return $this->Db->insert('carreras', $data);
+	//public function validateUser($data) {
+	public function validateUser($user, $pass) {
+		$data	= $this->Db->find($user, $this->table);
+
+		if ($data[0]['alucon'] === $pass)
+			return $data[0];
+		return false;
 	}
-	
+
+	public function getInfo($user) {
+		return $this->Db->query("SELECT DISTINCT matsem FROM zan_calificaciones NATURAL JOIN zan_materias WHERE aluctr = '$user' ORDER BY matsem ASC");
+	}
+
+	public function getSemesters($user) {
+		return $this->Db->query("SELECT DISTINCT matsem FROM zan_calificaciones NATURAL JOIN zan_materias WHERE aluctr = '$user' ORDER BY matsem ASC");
+	}
+
+	public function getInfoGrades($user) {
+		return $this->Db->query("SELECT * FROM zan_calificaciones NATURAL JOIN zan_materias WHERE aluctr = '$user' ");
+		/*$this->Db->from('calificaciones');
+		$this->Db->join('zan_materias', "zan_calificaciones.aluctr = '$user'", 'LEFT');		
+		$data	= $this->Db->get();*/
+	}
 }
