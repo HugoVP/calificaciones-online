@@ -13,7 +13,7 @@ class Admin_Model extends ZP_Model {
 		
 		$this->helpers();
 	
-		$this->table = "contacts";
+		$this->table = "zan_usuarios";
 	}
 
 	public function contact($contactID) {
