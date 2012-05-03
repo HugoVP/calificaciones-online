@@ -6,7 +6,7 @@ if(!defined("_access")) {
 	die("Error: You don't have permission to access here...");
 }
 
-class Contacts_Controller extends ZP_Controller {
+class Admin_Controller extends ZP_Controller {
 	
 	public function __construct() {
 		$this->app("contacts");
@@ -24,13 +24,15 @@ class Contacts_Controller extends ZP_Controller {
 		
 		$vars["view"]	 = $this->view("contacts", TRUE);
 		
-		$this->render("content", $vars);	
+		$this->render("content.php", $vars);	
 	}
 	
 
 	public function contact($contactID) {
+
 		$data = $this->Contacts_Model->contact($contactID);
 		____($data);
+	
 	}
 
 }
