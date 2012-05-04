@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Hola
 Hola de nuevo 
 <<<<<<< HEAD
@@ -204,3 +205,7 @@ To complete the translation process, you must add the translation in the followi
      
         return $text;
     }
+=======
+calificaciones-online
+=====================
+>>>>>>> 46a83609ca4b888b1f2aa94996d15e2ab048bb1b
