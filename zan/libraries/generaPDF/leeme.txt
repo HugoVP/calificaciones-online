@@ -1,0 +1,7 @@
+Al archivo pdf.php necesita de dos variables para funcionar.
+
+html = <código en html que se quiera colocar en el pdf>
+
+alumno = <nombre del alumno>
+
+Estas variables se pueden enviar ya sea por la URL o mediante un formulario.
