@@ -21,7 +21,7 @@ if(($ZP["benchMark"])) {
 if(isset($ZP["benchMark"])) {
 	benchMarkStart();
 }
-
+}
 execute();
 
 
@@ -32,4 +32,3 @@ if(isset($ZP["benchMark"]))
 {
 	benchMarkEnd();
 } 
-}

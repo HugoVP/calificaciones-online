@@ -64,7 +64,6 @@ class Api_Controller extends ZP_Controller {
 
 	public function pdf() {
 
-
 		if (!SESSION('user'))
 			return redirect(get('webURL') . _sh . 'calificaciones/home');
 
@@ -156,13 +155,7 @@ class Api_Controller extends ZP_Controller {
 		//Close and output PDF document
 		$pdf->Output(SESSION('aluctr').".pdf", 'I');
 		 
-		//$html = $_REQUEST['html'];
-		//$alumno = $_REQUEST['alumno'];
-		$html = 'html';
-		$alumno = 'alumno';		
-		require_once(_corePath ."/libraries/generapdf/pdf.php");
-		print _corePath ."/libraries/generapdf/tcpdf.php";
-		//$this->library
+	}
 
 	public function page($page) {
 		$data = $this->Default_Model->page($page);
