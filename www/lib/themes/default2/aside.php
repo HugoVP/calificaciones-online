@@ -17,6 +17,7 @@
 	            <div class="form-actions">
 	            	<!--<button id="createpdf" type="submit" class="btn btn-inverse btn-large" style="width: 100%;" onclick="//window.location = '<?php print get('webURL') . _sh . 'calificaciones/api/pdf/'; ?>'">Generar formato PDF</button>-->
 	            	<a class="btn btn-inverse btn-large" target="_black" href="<?php print get('webURL') . _sh . 'calificaciones/api/pdf/'; ?>">Generar formato PDF</a>
+
 	            </div>
 	        </div>
 	    </fieldset>

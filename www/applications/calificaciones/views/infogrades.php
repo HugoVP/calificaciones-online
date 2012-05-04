@@ -2,6 +2,7 @@
 	if(!defined("_access")) {
 		die("Error: You don't have permission to access here..."); 
 	}
+
 ?>
 
 <h2>Datos de las calificaciones</h2>
@@ -17,6 +18,7 @@
 		<tbody>
 
 <?php
+
 	if ($grades) {
 		foreach ($grades as $grade) {
 ?>
@@ -37,6 +39,10 @@
 		</tr>
 <?php			
 	}
+
 ?>
 </tbody>
 	</table>
+
+?>
+

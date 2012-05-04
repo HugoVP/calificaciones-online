@@ -37,8 +37,7 @@ class Calificaciones_Controller extends ZP_Controller {
 
 		$nsemesters	= $this->Model->getSemesters(SESSION('user'));
 		$grades		= $this->Model->getInfoGrades(SESSION('user'));
-		//____($data);
-		
+
 		$vars['nsemesters']	= $nsemesters;
 		$vars['grades']		= $grades;
 		$vars['view']['infogrades']	= $this->view('infogrades', TRUE);

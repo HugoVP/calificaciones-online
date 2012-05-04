@@ -11,7 +11,6 @@
 		<?php $this->load(isset($view['infogrades']) ? $view['infogrades'] : NULL, TRUE); ?>
 		
 		<!-- VIEW INFOGRADES -->
-		
 </div>
 
 <?php $this->load('aside'); ?>
