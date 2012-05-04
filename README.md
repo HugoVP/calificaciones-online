@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-﻿Introduction
-=======
-﻿Hola
-Hola de nuevo 
-<<<<<<< HEAD
-Hola!v Alfonso  ---->>> Nuevo comentario antes de hacer pull
-=======
-Hola!v Alfonso
-Saludos Alfonso esta es mi respuesta
->>>>>>> 55e5f5d5828a00c1ae3d72acb01ea2ae626132b1
-
-Sorpeprperp
+﻿Probando git. 
+Alfonso Calderón Chávez
+Hugo Vázquez Paleo
+Gersaín Aguilar Pardo
 
 Introduction
->>>>>>> 8d9a2deb4fe12df22545f4c8f4982ad504f17ab1
+
 ------------------------
 ZanPHP is an agile Web application development framework written in PHP5 that uses different design patterns and best practices to create applications more quickly with good quality code.
 
